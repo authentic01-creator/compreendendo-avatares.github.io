@@ -1,0 +1,157 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    color: #000000; /* Cor do texto preta */
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Cabeçalho */
+header {
+    padding: 20px;
+    background: linear-gradient(135deg, #0c38bc, #d30000);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Título do cabeçalho */
+h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeIn 2s ease-out;
+}
+
+
+/* Seções */
+main {
+    padding: 20px;
+}
+
+
+/* Container das Imagens */
+.avatar-wrapper {
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.avatar-main {
+    width: 200px; /* Tamanho reduzido da imagem central */
+    height: auto;
+    border: 5px solid #000000; /* Borda preta para contraste com o fundo branco */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 1; /* Garantir que a imagem central fique acima das laterais */
+}
+
+
+.avatar-side {
+    width: 100px; /* Tamanho reduzido das imagens laterais */
+    height: auto;
+    border: 3px solid #000000; /* Borda preta */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 0; /* Imagens laterais ficam atrás da imagem central */
+}
+
+
+.avatar-left {
+    left: calc(50% - 320px); /* Ajuste para posicionar a imagem lateral esquerda mais próxima */
+}
+
+
+.avatar-right {
+    right: calc(50% - 320px); /* Ajuste para posicionar a imagem lateral direita mais próxima */
+}
+
+
+/* Texto */
+.intro p, .details p, .details ul {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+    animation: fadeIn 2s ease-out;
+}
+
+
+.details h2 {
+    font-size: 2.2em;
+    margin-top: 30px;
+    color: #7300ff; /* Cor azul para os subtítulos */
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+
+/* Lista */
+.details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.details ul li {
+    background: #f0f0f0; /* Fundo claro para os itens da lista */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+}
+
+
+.details ul li:hover {
+    background: #6f17aa;
+    color: #050505;
+}
+
+
+/* Rodapé */
+footer {
+    padding: 20px;
+    background: linear-gradient(135deg, #044ac4, #d30000);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
